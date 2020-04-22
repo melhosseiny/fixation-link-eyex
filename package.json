@@ -1,0 +1,14 @@
+{
+  "name": "fixation-link-eyex",
+  "version": "0.0.1",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "node  --experimental-modules eyex.mjs"
+  },
+  "dependencies": {
+    "edge-js": "^13.0.1",
+    "socket.io": "^2.3.0"
+  }
+}
