@@ -1,9 +1,13 @@
-import SocketIO from 'socket.io';
+import { Server } from 'socket.io';
 import edge from 'edge-js';
 
 const PORT = process.env.PORT || 80;
 
-let io = SocketIO(PORT);
+let io = new Server(PORT, {
+  cors: {
+    origin: '*'
+  }
+});
 
 let EyeXFramework = edge.func('eyex.cs');
 

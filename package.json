@@ -2,13 +2,13 @@
   "name": "fixation-link-eyex",
   "version": "0.0.1",
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "scripts": {
-    "start": "node  --experimental-modules eyex.mjs"
+    "start": "node --experimental-modules eyex.mjs"
   },
   "dependencies": {
-    "edge-js": "^13.0.1",
-    "socket.io": "^2.3.0"
+    "edge-js": "^14.3.2",
+    "socket.io": "^3.0.4"
   }
 }
