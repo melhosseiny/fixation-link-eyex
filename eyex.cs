@@ -27,7 +27,11 @@ public class Startup
       var stream = eyeXHost.CreateGazePointDataStream(GazePointDataMode.LightlyFiltered);
       await Task.Run(() => eyeXHost.Start());
       stream.Next += async (s, e) => {
-        await onGazePoint(new GazePoint(e.X, e.Y, e.Timestamp));
+        await onGazePoint(new GazePoint(
+          e.X / eyeXHost.ScreenBounds.Value.Width,
+          e.Y / eyeXHost.ScreenBounds.Value.Height,
+          e.Timestamp
+        ));
       };
       Console.WriteLine("Listening for gaze data, press any key to exit...");
       //Console.In.Read();
